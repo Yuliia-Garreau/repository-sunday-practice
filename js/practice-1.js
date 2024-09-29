@@ -63,7 +63,6 @@
 
 // console.log(namelogNumbers(1, 20));
 
-
 // Напишіть функцію fizzBuzz яка приймає число
 //Якщо число ділитися на 3 повертати fizz
 //якщо ділитися на 5 повертати buzz
@@ -95,24 +94,48 @@
 //то вивести рядок "Добрий день!"
 //інакше виводити рядок "Невірний пароль!"
 
+// function checkUser() {
+//   const userRule = prompt("Введіть логін");
+//   if (userRule === "Адмін") {
+//     const userPassword = prompt("Введіть пароль:");
+//     if (!userPassword) {
+//       console.log("Скасовано");
+//     }
+//     else if (userPassword === "Я головний") {
+//       console.log("Добрий день!");
+//     } else {
+//       console.log("Невірний пароль!");
 
-function checkUser() {
-  const userRule = prompt("Введіть логін");
-  if (userRule === "Адмін") {
-    const userPassword = prompt("Введіть пароль:");
-    if (!userPassword) {
-      console.log("Скасовано");
-    }
-    else if (userPassword === "Я головний") {
-      console.log("Добрий день!");
-    } else { 
-      console.log("Невірний пароль!");
-      
-    }
-    
-  } else { 
-    console.log("Я вас не знаю");
-    
+//     }
+
+//   } else {
+//     console.log("Я вас не знаю");
+
+//   }
+// }
+// checkUser()
+
+//~При завантаженні сторінки користувачеві пропонується
+//в prompt ввести число. Введення додається до значення
+//змінної total.
+//Операція введення числа триває до того часу,
+//поки користувач не натисне кнопку Cancel в prompt.
+//Після того, як користувач припинив введення натиснувши на
+//кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+//Робити перевірку,що користувач ввів саме число,
+//~а не довільний набір символів, не потрібно.
+
+// console.log(inputValue);
+
+function inputValueNum() {
+  let inputValue = prompt("Введіть число");
+  let total = 0;
+
+  while (inputValue) {
+    total += Number(inputValue);
+
+    inputValue = prompt("Введіть число");
   }
+  alert(`Загальна сума введених чисел дорівнює ${total}`);
 }
-checkUser()
+inputValueNum();
