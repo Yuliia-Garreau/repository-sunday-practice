@@ -68,14 +68,51 @@
 //Якщо число ділитися на 3 повертати fizz
 //якщо ділитися на 5 повертати buzz
 //Якщо ділитися на 3 і на 5 повернути fizzbuzz
-function fizzBuzz(num) {
-  if (num % 3 === 0 && num % 5 === 0) {
-    return "fizzbuzz"
-  }
-  else if (num % 3 === 0) { return "fizz" }
-  else if (num % 5 === 0) { return "buzz" }
-  else { 
-    return num
+// function fizzBuzz(num) {
+//   if (num % 3 === 0 && num % 5 === 0) {
+//     return "fizzbuzz"
+//   }
+//   else if (num % 3 === 0) { return "fizz" }
+//   else if (num % 5 === 0) { return "buzz" }
+//   else {
+//     return num
+//   }
+// }
+// console.log(fizzBuzz(15));
+
+//~Напишіть код, який запитуватиме
+//логін за допомогою prompt і логувати результат
+//в консоль браузера
+
+//Якщо відвідувач вводить "Адмін",
+//то prompt запитує пароль.
+//Якщо нічого не ввели або натиснута клавіша Esc
+//Вивести стороку "Скасовано"
+// Інакше вивести рядок "Я вас не знаю"
+
+//Пароль перевіряти так:
+//Якщо введено пароль "Я головний",
+//то вивести рядок "Добрий день!"
+//інакше виводити рядок "Невірний пароль!"
+
+
+function checkUser() {
+  const userRule = prompt("Введіть логін");
+  if (userRule === "Адмін") {
+    const userPassword = prompt("Введіть пароль:");
+    if (!userPassword) {
+      console.log("Скасовано");
+    }
+    else if (userPassword === "Я головний") {
+      console.log("Добрий день!");
+    } else { 
+      console.log("Невірний пароль!");
+      
+    }
+    
+  } else { 
+    console.log("Я вас не знаю");
+    
   }
 }
-console.log(fizzBuzz(15));
+checkUser()
