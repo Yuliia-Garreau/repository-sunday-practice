@@ -17,31 +17,48 @@
 // }
 // console.log(getQuarter(55));
 
-
 //~ Напиши функцію яка запитує у користувача ведення числа  1, 2, 3 або 4. Якщо вона має
 //~ значення '1', то у змінну result запишемо 'зима', якщо має значення
 //~ '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
 
-function checkSeason(num) {
-  let result;
-switch (num) {
-  case 1:
-    result = "зима";
-    break;
-  case 2:
-    result = "весна";
-    break;
-   case 3:
-    result = "літо";
-    break;
-  case 4:
-    result = "осінь";
-    break;
-  default:
-    result = "хибне значення";
-    break;
+// function checkSeason(num) {
+//   let result;
+// switch (num) {
+//   case 1:
+//     result = "зима";
+//     break;
+//   case 2:
+//     result = "весна";
+//     break;
+//    case 3:
+//     result = "літо";
+//     break;
+//   case 4:
+//     result = "осінь";
+//     break;
+//   default:
+//     result = "хибне значення";
+//     break;
+//   }
+//   return result;
+// }
+
+// console.log(checkSeason(5));
+
+//~ Створи функцію logNumbers яка приймає min і max
+//~ і виводить у консоль
+//~ числа від max до min за спаданням
+//~ Додайте усі парні числа від min до max і поверніть результат з функції
+
+function namelogNumbers(min, max) {
+  let sum = 0;
+  for (let i = max; i >= min; i--) {
+    console.log(i);
+    if (i % 2 === 0) {
+      sum += i;
+    }
   }
-  return result;
+  return sum;
 }
 
-console.log(checkSeason(5));
+console.log(namelogNumbers(1, 20));
