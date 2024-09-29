@@ -50,15 +50,32 @@
 //~ числа від max до min за спаданням
 //~ Додайте усі парні числа від min до max і поверніть результат з функції
 
-function namelogNumbers(min, max) {
-  let sum = 0;
-  for (let i = max; i >= min; i--) {
-    console.log(i);
-    if (i % 2 === 0) {
-      sum += i;
-    }
-  }
-  return sum;
-}
+// function namelogNumbers(min, max) {
+//   let sum = 0;
+//   for (let i = max; i >= min; i--) {
+//     console.log(i);
+//     if (i % 2 === 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
 
-console.log(namelogNumbers(1, 20));
+// console.log(namelogNumbers(1, 20));
+
+
+// Напишіть функцію fizzBuzz яка приймає число
+//Якщо число ділитися на 3 повертати fizz
+//якщо ділитися на 5 повертати buzz
+//Якщо ділитися на 3 і на 5 повернути fizzbuzz
+function fizzBuzz(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return "fizzbuzz"
+  }
+  else if (num % 3 === 0) { return "fizz" }
+  else if (num % 5 === 0) { return "buzz" }
+  else { 
+    return num
+  }
+}
+console.log(fizzBuzz(15));
