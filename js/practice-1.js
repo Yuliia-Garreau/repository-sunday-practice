@@ -127,15 +127,15 @@
 
 // console.log(inputValue);
 
-function inputValueNum() {
-  let inputValue = prompt("Введіть число");
-  let total = 0;
+// function inputValueNum() {
+//   let inputValue = prompt("Введіть число");
+//   let total = 0;
 
-  while (inputValue) {
-    total += Number(inputValue);
+//   while (inputValue) {
+//     total += Number(inputValue);
 
-    inputValue = prompt("Введіть число");
-  }
-  alert(`Загальна сума введених чисел дорівнює ${total}`);
-}
-inputValueNum();
+//     inputValue = prompt("Введіть число");
+//   }
+//   alert(`Загальна сума введених чисел дорівнює ${total}`);
+// }
+// inputValueNum();
