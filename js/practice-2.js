@@ -72,10 +72,10 @@
 // console.log(sale(fruits));
 
 // Угруповання об'єктів студентів по курсам
-// Створіть масив об'єктів, що являють собою різних студентів. Кожен об'єкт 
+// Створіть масив об'єктів, що являють собою різних студентів. Кожен об'єкт
 //повинен містити властивості ім'я, вік та курс.
 // Використовуйте цикл for...of, щоб згрупувати студентів за курсами.
-// Результатом буде об'єкт, де ключами будуть назви курсів, а значення – масиви 
+// Результатом буде об'єкт, де ключами будуть назви курсів, а значення – масиви
 //об'єктів студентів, що належать до відповідного курсу.
 // Очікуванний результат:
 // const groupedStudents = {
@@ -87,12 +87,12 @@
 //   JavaScript: [{ name: "Джон", age: 23, course: "JavaScript" }],
 // };
 const students = [
-    { name: "Алиса", age: 20, course: "Java" },
-    { name: "Боб", age: 22, course: "Python" },
-    { name: "Карл", age: 21, course: "Java" },
-    { name: "Джон", age: 23, course: "JavaScript" },
+  { name: "Алиса", age: 20, course: "Java" },
+  { name: "Боб", age: 22, course: "Python" },
+  { name: "Карл", age: 21, course: "Java" },
+  { name: "Джон", age: 23, course: "JavaScript" },
 ];
-  
+
 function groupStudents(students) {
   const groupedStudents = {};
   for (const student of students) {
@@ -105,3 +105,39 @@ function groupStudents(students) {
 }
 console.log(groupStudents(students));
 
+//TODO:=======================
+//Напиши скрипт, який для об'єкта user,
+//Послідовно:
+//1 додати поле mood зі значенням 'happy'
+//2 замінити hobby на 'skydiving'
+//3 замінити значення premium на false
+//4 виводити вміст об'єкта user у форматі
+
+//ключ:значення використовуючи Object.keys() і for...of
+// const user = {
+// name: "John",
+// age: 20,
+// hobby: "tenis",
+// premium: true,
+//};
+
+// Додати метод getinfo в об'єкт user, який повертатиме інфу про користувача у форматі
+// Name: Peter. Surname: Parker. Age: 22. Position: spider-man.
+
+// const user = {
+//     name: 'Peter',
+//     surname: 'Parker',
+//     age: 22,
+//     position: 'spider-man'
+// }
+
+// const user2 = {
+//   name: "Batman",
+//   surname: "Hz",
+//   age: 36,
+//   position: "batman",
+// };
+
+//Напишіть функцію updateObject, яка приймає об'єкт та повертає
+//новий об'єкт без зазначеного параметра
+//Очікуваний результат ({a: 1. b: 2}, 'b') => {a: 1}
