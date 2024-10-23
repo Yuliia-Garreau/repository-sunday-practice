@@ -32,6 +32,23 @@
 // }
 // console.log(unique(words));
 
+// 2 спосіб розвязку задачі
+
+// function getUnique(arr) {
+//   const uniqueArr = [];
+
+//   for(let i = 0; i < arr.length; i++) {
+//     if(i === arr.indexOf(arr[i])) {
+//       uniqueArr.push(arr[i]);
+//     }
+//   }
+
+//   return uniqueArr;
+// }
+
+// console.log(getUnique(words));
+
+
 // напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
 // const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
@@ -86,24 +103,24 @@
 //   Python: [{ name: "Боб", age: 22, course: "Python" }],
 //   JavaScript: [{ name: "Джон", age: 23, course: "JavaScript" }],
 // };
-const students = [
-  { name: "Алиса", age: 20, course: "Java" },
-  { name: "Боб", age: 22, course: "Python" },
-  { name: "Карл", age: 21, course: "Java" },
-  { name: "Джон", age: 23, course: "JavaScript" },
-];
+// const students = [
+//   { name: "Алиса", age: 20, course: "Java" },
+//   { name: "Боб", age: 22, course: "Python" },
+//   { name: "Карл", age: 21, course: "Java" },
+//   { name: "Джон", age: 23, course: "JavaScript" },
+// ];
 
-function groupStudents(students) {
-  const groupedStudents = {};
-  for (const student of students) {
-    if (!groupedStudents[student.course]) {
-      groupedStudents[student.course] = [];
-    }
-    groupedStudents[student.course].push(student);
-  }
-  return groupedStudents;
-}
-console.log(groupStudents(students));
+// function groupStudents(students) {
+//   const groupedStudents = {};
+//   for (const student of students) {
+//     if (!groupedStudents[student.course]) {
+//       groupedStudents[student.course] = [];
+//     }
+//     groupedStudents[student.course].push(student);
+//   }
+//   return groupedStudents;
+// }
+// console.log(groupStudents(students));
 
 //TODO:=======================
 //Напиши скрипт, який для об'єкта user,
