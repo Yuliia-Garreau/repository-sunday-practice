@@ -105,16 +105,88 @@ const users = [
 //   return users.filter((user) => user.eyeColor === color);
 // }
 // console.log(getUsersWithEyeColor(users, "blue"));
-//-----
+
+// Task-3
 // Отримати масив імен користувачів за статтю (поле gender)
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
-function getUsersWithGender(users, genders) {
-  // return users.filter(user=>user.gender===genders).map(user=>user.name)
-  return users.reduce((acc, user) => {
-    if (user.gender === genders) {
-    acc.push(user.name)
-    }
-    return acc;
-  }, [])
-}
-console.log(getUsersWithGender(users, 'male'));
+
+// function getUsersWithGender(users, genders) {
+//   return users.filter(user=>user.gender===genders).map(user=>user.name)
+//   return users.reduce((acc, user) => {
+//     if (user.gender === genders) {
+//     acc.push(user.name)
+//     }
+//     return acc;
+//   }, [])
+// }
+// console.log(getUsersWithGender(users, 'male'));
+
+// Task-4
+//Повернути об'єкт у якому вказується кількість тегів
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// function gatTags(tweets) {
+//   return tweets
+//     .flatMap((tweet) => tweet.tags)
+//     .reduce((obj, tag) => {
+//       return { ...obj, [tag]: obj[tag] ? obj[tag] + 1 : 1 };
+//     }, {});
+// }
+// console.log(gatTags(tweets));
+// //{
+//   js: 3,
+//   nodejs: 3,
+//   html: 2,
+//   css: 2,
+//   react: 2
+// }
+
+// Task-5
+//Напиши клас Notes який управляє колекцією нотаток у
+//властивості items.
+//Нотатка - це об'єкт із властивостями text і priority.
+//Додай класу статичний метод Priopity,
+//який буде повертати об'єкт із пріоритетами.
+//Додай методи addNote(note), removeNote(text)
+//updatePriority(text, newPriority)
+
+// class Notes {
+//   constructor(parameters) {
+//     this.items = [];
+//   }
+
+//   static Priority() {
+//     return { high: "high", low: "low" };
+//   }
+
+//   addNote(note) {
+//     this.items.push(note);
+//   }
+
+//   removeNote(text) {
+//     const index = this.items.findIndex((item) => item.text === text);
+//     if (index !== -1) {
+//       this.items.splice(index, 1);
+//     }
+//   }
+
+//   updatePriority({ text, newPriority }) {
+//     const index = this.items.findIndex((item) => item.text === text);
+//     if (index !== -1) {
+//       this.items[index].priority = newPriority;
+//     }
+//   }
+// }
+// const note1 = new Notes();
+// note1.addNote({ text: "Note1", priority: Notes.Priority().low });
+// note1.addNote({ text: "Note2", priority: Notes.Priority().low });
+// note1.addNote({ text: "Note3", priority: Notes.Priority().low });
+// note1.removeNote("Note1");
+// note1.updatePriority({ text: "Note2", newPriority: Notes.Priority().high });
+// console.log(note1);
