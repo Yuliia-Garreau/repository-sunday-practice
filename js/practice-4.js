@@ -104,3 +104,22 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event
 //   outerCircle.style.left = `${event.pageX - 20}px`;
 //   outerCircle.style.top = `${event.pageY - 20}px`;
 // }
+
+/*Завдання 6
+Натиснувши кнопку "Подвоювати", збільшити значення
+у кожному елементі списку у 2 рази
+*/
+
+// const btn = document.querySelector("#double");
+// const list = document.querySelector(".list");
+
+// btn.addEventListener("click", function doubl(event) {
+//   const items = document.querySelectorAll(".listItem");
+//   const arr = [...items];
+//   const doublArr = arr
+//     .map((item) => {
+//       return `<li class="listItem">${item.textContent * 2}</li>`;
+//     })
+//     .join("");
+//   list.innerHTML = doublArr;
+// });
