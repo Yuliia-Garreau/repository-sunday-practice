@@ -52,30 +52,55 @@
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів, допопка "Збільшити" - більше на 10 пікселів.
 https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
 */
-const box = document.querySelector("#box");
-const decrease = document.querySelector("#decrease");
-decrease.addEventListener("click", decreaseBox);
-const increase = document.querySelector("#increase");
-increase.addEventListener("click", increaseBox);
-let boxWidth = parseInt(getComputedStyle(box).width);
-let boxHight = parseInt(getComputedStyle(box).height);
+// const box = document.querySelector("#box");
+// const decrease = document.querySelector("#decrease");
+// decrease.addEventListener("click", decreaseBox);
+// const increase = document.querySelector("#increase");
+// increase.addEventListener("click", increaseBox);
+// let boxWidth = parseInt(getComputedStyle(box).width);
+// let boxHight = parseInt(getComputedStyle(box).height);
 
-console.log(boxWidth);
-console.log(boxHight);
+// console.log(boxWidth);
+// console.log(boxHight);
 
-function decreaseBox() {
-  if (boxWidth < 10 || boxHight < 10) {
-    return;
-  }
-  boxWidth -= 10;
-  boxHight -= 10;
-  box.style.width = `${boxWidth}px`;
-  box.style.height = `${boxHightpx}px`;
-}
+// function decreaseBox() {
+//   if (boxWidth < 10 || boxHight < 10) {
+//     return;
+//   }
+//   boxWidth -= 10;
+//   boxHight -= 10;
+//   box.style.width = `${boxWidth}px`;
+//   box.style.height = `${boxHightpx}px`;
+// }
 
-function increaseBox() {
-  boxWidth += 10;
-  boxHight += 10;
-  box.style.width = `${boxWidth}px`;
-  box.style.height = `${boxHightpx}px`;
-}
+// function increaseBox() {
+//   boxWidth += 10;
+//   boxHight += 10;
+//   box.style.width = `${boxWidth}px`;
+//   box.style.height = `${boxHightpx}px`;
+// }
+/*
+При натисканні на коло він повинен слідувати за курсором.
+При повторному натисканні він стає в початкове положення.
+https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
+https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
+https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
+https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event
+*/
+// const outerCircle = document.querySelector(".outerCircle");
+
+// outerCircle.addEventListener("click", handleClick);
+
+// function handleClick() {
+//   if (getComputedStyle(outerCircle).position === "static") {
+//     window.addEventListener("mousemove", onMouseMove);
+//     outerCircle.style.position = "absolute";
+//   } else {
+//     outerCircle.style.position = "static";
+//     window.removeEventListener("mousemove", onMouseMove);
+//   }
+// }
+// function onMouseMove(event) {
+//   outerCircle.style.left = `${event.pageX - 20}px`;
+//   outerCircle.style.top = `${event.pageY - 20}px`;
+// }
